@@ -1,0 +1,21 @@
+{
+  "name": "mikro-orm-arp",
+  "version": "1.0.1",
+  "description": "Active Record Patter for mikro-orm",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "cupcakearmy",
+  "license": "MIT",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc",
+    "prepublishOnly": "rm -rf dist && yarn run build"
+  },
+  "devDependencies": {
+    "@mikro-orm/core": "^4.0.0-rc.4",
+    "typescript": "^4.0.2"
+  },
+  "peerDependencies": {
+    "@mikro-orm/core": "^4.0.0-rc.4"
+  }
+}
