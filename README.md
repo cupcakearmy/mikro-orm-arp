@@ -1,6 +1,6 @@
 # mikro-orm-arp
 
-Active Record Pattern for Mikro-ORM.
+Active Record(-ish) Pattern for Mikro-ORM.
 
 Ads the own repository functions to the class as static functions so you don't have to always retrieve them.
 
