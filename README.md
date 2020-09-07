@@ -7,6 +7,7 @@ Ads the own repository functions to the class as static functions so you don't h
 ## 🏗 Installation
 
 ```bash
+yarn add mikro-orm-arp
 npm install mikro-orm-arp
 ```
 
