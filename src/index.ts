@@ -10,6 +10,7 @@ export abstract class BaseEntity {
     return orm.em.getRepository<T>(this)
   }
 
+  // Native Functions
   static count<T extends BaseEntity>(this: ObjectType<T>, ...args: Parameters<EntityRepository<T>['count']>): ReturnType<EntityRepository<T>['count']> {
     return (this as any).getRepo().count(...args)
   }
