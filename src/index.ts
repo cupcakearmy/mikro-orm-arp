@@ -53,6 +53,9 @@ export abstract class BaseEntity {
   static persist<T extends BaseEntity>(this: ObjectType<T>, ...args: Parameters<EntityRepository<T>['persist']>): ReturnType<EntityRepository<T>['persist']> {
     return (this as any).getRepo().persist(...args)
   }
+  static persistAndFlush<T extends BaseEntity>(this: ObjectType<T>, ...args: Parameters<EntityRepository<T>['persistAndFlush']>): ReturnType<EntityRepository<T>['persistAndFlush']> {
+    return (this as any).getRepo().persist(...args)
+  }
   static populate<T extends BaseEntity>(this: ObjectType<T>, ...args: Parameters<EntityRepository<T>['populate']>): ReturnType<EntityRepository<T>['populate']> {
     return (this as any).getRepo().populate(...args)
   }
@@ -61,4 +64,4 @@ export abstract class BaseEntity {
   }
 }
 
-export const register = <D extends IDatabaseDriver = IDatabaseDriver>(db: MikroORM<D>) => (orm = db)
+export const register = <D extends IDatabaseDriver = IDatabaseDriver<Connection>>(db: MikroORM<D>) => (orm = db)
